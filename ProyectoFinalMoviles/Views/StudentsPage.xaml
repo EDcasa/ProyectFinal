@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalMoviles.Views.StudentsPage">
+    <ContentPage.Content>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="Start">
+                <Label Text="Busqueda por cedula" FontAttributes="Bold" FontSize="Title" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+                <Entry Text="{Binding NumberDocument}" Placeholder="# Cedula (Requerido)"/>
+                <Button WidthRequest="200" Text="Buscar" Command="{Binding SearchStudentCommand}"/>
+            </StackLayout>
+            <ListView Grid.Row="1" x:Name="lstStudents" ItemsSource="{Binding Students}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding NumberDocument}"/>
+                                <Label Text="{Binding FirstName}"/>
+                                <Label Text="{Binding LastName}"/>
+                                <Label Text="{Binding Age}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

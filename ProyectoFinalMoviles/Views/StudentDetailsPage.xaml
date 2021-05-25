@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalMoviles.Views.StudentDetailsPage" Title="Actualizar informacion">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="# Cedula:" FontAttributes="Bold"/>
+            <Entry x:Name="DocumentNumber" Text="{Binding NumberDocument}" IsReadOnly="true"/>
+            <Label Text="Nombres" FontAttributes="Bold"/>
+            <Entry x:Name="FirstName" Text="{Binding FirstName}"/>
+            <Label Text="Apellidos" FontAttributes="Bold"/>
+            <Entry x:Name="LastName" Text="{Binding LastName}" />
+            <Label Text="Edad:" FontAttributes="Bold"/>
+            <Entry x:Name="Age" Text="{Binding Age}" />
+            <Label Text="Descripcion:" FontAttributes="Bold"/>
+            <Entry x:Name="Description" Text="{Binding Description}" />
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Text="Actualizar" Clicked="BtnUpdate_Student"/>
+                <Button Grid.Column="1" Text="Eliminar" Clicked="BtnDelete_Student"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyectoFinalMoviles.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <StackLayout VerticalOptions="Center" Margin="20">
+        <StackLayout >
+            <Image Source="buscame.png" WidthRequest="80" HeightRequest="100"></Image>
+        </StackLayout>
+        <Label Text="Bienvenidos" HorizontalOptions="Center" TextColor="#4682B4" FontSize="35" Margin="0,20"/>
+        <Entry Placeholder="Correo electrónico" Keyboard="Email" x:Name="EmailInput"/>
+        <Entry Placeholder="Contraseña" IsPassword="True" x:Name="PasswordInput"/>
+        <Button Text="Iniciar sesión" Clicked="LoginClicked" Margin="60,40" BackgroundColor="#4682B4" TextColor="White"/>
+        <Button Text="Registrarse" Clicked="SignUpClicked" TextColor="#4682B4" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+
+    </StackLayout>
+</ContentPage>

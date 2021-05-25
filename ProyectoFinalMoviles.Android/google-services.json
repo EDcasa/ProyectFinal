@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "883556984930",
+    "firebase_url": "https://lostpeopleui-default-rtdb.firebaseio.com",
+    "project_id": "lostpeopleui",
+    "storage_bucket": "lostpeopleui.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883556984930:android:22cfe72ef25441a068093b",
+        "android_client_info": {
+          "package_name": "com.homesoftcore.lostpeople"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883556984930-js2i3qh4r3u4nbjrptdafidrmpl8l2ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHiW7bSmCsVRRIcdmSttQj5fjlIWCbbIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883556984930-js2i3qh4r3u4nbjrptdafidrmpl8l2ou.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "883556984930-cg6s99ka9e7h3hcgaf5i2k02je3ve80h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homesoftcore.lostpeople"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

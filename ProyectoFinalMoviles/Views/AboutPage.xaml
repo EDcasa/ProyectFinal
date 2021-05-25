@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalMoviles.Views.AboutPage"
+             xmlns:vm="clr-namespace:ProyectoFinalMoviles.ViewModels"
+             Title="Personas desaparecidas">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="1" x:Name="lstStudents" ItemsSource="{Binding Students}" ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Nombres y apellidos:" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding FirstName}" HorizontalOptions="Fill" Grid.Column="1"/>
+
+                                    <Label Text="{Binding LastName}" Grid.Column="2"/>
+                                    <Label Text="# Cedula:" FontAttributes="Bold" Grid.Row="1"/>
+                                    <Label Text="{Binding NumberDocument}" Grid.Column="1" Grid.Row="1"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
